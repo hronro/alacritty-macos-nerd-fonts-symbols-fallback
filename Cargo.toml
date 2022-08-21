@@ -8,6 +8,9 @@ members = [
 ]
 
 [profile.release]
+strip = true
+overflow-checks = false
 lto = true
-debug = 1
+panic = "abort"
 incremental = false
+codegen-units = 1
