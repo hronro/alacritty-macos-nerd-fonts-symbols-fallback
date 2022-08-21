@@ -1,0 +1,29 @@
+name: Dev Build
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  macos:
+    runs-on: macos-11
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install ARM target
+        run: rustup update && rustup target add aarch64-apple-darwin
+      - name: Test
+        run: cargo test --release
+      - name: Build ARM
+        run: cargo build --release --target=aarch64-apple-darwin
+      - name: Make DMG
+        run: make dmg-universal
+      - name: Upload Application
+        uses: actions/upload-artifact@v3
+        with:
+          name: macOS
+          path: target/release/osx/Alacritty.dmg
