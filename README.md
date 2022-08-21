@@ -10,6 +10,14 @@
        src="https://user-images.githubusercontent.com/8886672/103264352-5ab0d500-49a2-11eb-8961-02f7da66c855.png">
 </p>
 
+## Fork Description
+
+This fork added `Symbols Nerd Font` to the fonts fallback list (only on macOS), so once you installed `Symbols Nerd Font` (you can easily find it in [the release page of nerd fonts](https://github.com/ryanoasis/nerd-fonts/releases)), you can display iconic fonts in Alacritty even if you don't have patched fonts installed.
+
+This fork also turns on extra optimizations, so it runs a little faster than the origin Alacritty.
+
+You can download the pre-built binaries in [Releases](https://github.com/hronro/alacritty-macos-nerd-fonts-symbols-fallback/releases) or [GitHub Action Artifacts](https://github.com/hronro/alacritty-macos-nerd-fonts-symbols-fallback/actions/workflows/dev-build.yml).
+
 ## About
 
 Alacritty is a modern terminal emulator that comes with sensible defaults, but
