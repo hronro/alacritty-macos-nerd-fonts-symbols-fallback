@@ -33,7 +33,7 @@ glutin = { version = "0.30.3", default-features = false, features = ["egl", "wgl
 winit = { version = "0.27.4", default-features = false, features = ["serde"] }
 notify-debouncer-mini = { version = "0.2.1", default-features = false }
 parking_lot = "0.12.0"
-crossfont = { version = "0.5.0", features = ["force_system_fontconfig"] }
+crossfont = { path = "../crossfont", version = "0.5.1", features = ["force_system_fontconfig"] }
 copypasta = { version = "0.8.1", default-features = false }
 raw-window-handle = "0.5.0"
 libc = "0.2"
